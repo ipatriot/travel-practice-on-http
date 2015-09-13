@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel Journal</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <h1>Places</h1>
+
+    <ul>
+      <% places.each do |place| %>
+        <li><%= "#{place}" %></li>
+      <% end %>
+    </ul>
+
+    <h2>Post the new place you visited!</h2>
+
+  <form action="/places" method="post">
+    <label for="place">Place:</label>
+    <input type="text" id="place" name="place">
+
+    <input type="submit">
+
+  </form>
+
+  </body>
+</html>
